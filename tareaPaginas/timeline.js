@@ -93,14 +93,7 @@
     }
   }
 
-  // ADD SWIPE SUPPORT FOR TOUCH DEVICES
-  function setSwipeFn(tl, prev, next) {
-    const hammer = new Hammer(tl);
-    hammer.on("swipeleft", () => next.click());
-    hammer.on("swiperight", () => prev.click());
-  }
-
-  // ADD BASIC KEYBOARD FUNCTIONALITY
+ // ADD BASIC KEYBOARD FUNCTIONALITY
   function setKeyboardFn(prev, next) {
     document.addEventListener("keydown", (e) => {
       if ((e.which === 37) || (e.which === 39)) {
