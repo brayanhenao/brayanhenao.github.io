@@ -47,8 +47,8 @@ h1{
 }
 
 body{
-	
 	color: white;
+  background-color: grey;
 }
 
 .jumbotron {
@@ -340,7 +340,7 @@ html{
 /* Timeline */
 
 #contacto{
-	margin-top: 6%;
+	padding-top: 5%;
 	background-color: white;
 	color: black;
 }
@@ -675,10 +675,21 @@ body {
   width: 100%;
 }
 
-#juegos{
-  padding-top: 3%;
-  padding-bottom: 6%;
-  background-color: grey;
-  color: black;
-  width: 100%;
+/* Showcase */
+.showcase .showcase-text{
+  padding:3rem
 }
+
+.showcase .showcase-img{
+  min-height:30rem;
+  background-size:cover
+}
+
+@media (min-width:768px)
+{.showcase .showcase-text{
+  padding:7rem}
+}
+
+
+/* Showcase */
+
