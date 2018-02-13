@@ -689,7 +689,10 @@ body {
 {.showcase .showcase-text{
   padding:7rem}
 }
-
-
 /* Showcase */
+
+.justificar{
+  text-align: justify;
+}
+
 

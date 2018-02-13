@@ -1,13 +1,13 @@
 (function() {
 
   // VARIABLES
-  const timeline = document.querySelector(".timeline ol"),
-    elH = document.querySelectorAll(".timeline li > div"),
-    arrows = document.querySelectorAll(".timeline .arrows .arrow"),
-    arrowPrev = document.querySelector(".timeline .arrows .arrow__prev"),
-    arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
-    firstItem = document.querySelector(".timeline li:first-child"),
-    lastItem = document.querySelector(".timeline li:last-child"),
+  const timeline = document.querySelector(".timelinee ol"),
+    elH = document.querySelectorAll(".timelinee li > div"),
+    arrows = document.querySelectorAll(".timelinee .arrows .arrow"),
+    arrowPrev = document.querySelector(".timelinee .arrows .arrow__prev"),
+    arrowNext = document.querySelector(".timelinee .arrows .arrow__next"),
+    firstItem = document.querySelector(".timelinee li:first-child"),
+    lastItem = document.querySelector(".timelinee li:last-child"),
     xScrolling = 280,
     disabledClass = "disabled";
 
