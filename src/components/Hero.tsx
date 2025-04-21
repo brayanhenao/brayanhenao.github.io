@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
           
           <div className="md:w-2/5 flex justify-center">
             <img
-              src="/public/photo.jpeg"
+              src="/photo.jpeg"
               alt="Brayan Henao" 
               className="rounded-full w-64 h-64 object-cover border-4 border-blue-600 dark:border-blue-400 shadow-xl"
               loading="eager"
