@@ -49,17 +49,6 @@ const About: React.FC = () => {
               communicate across cultural boundaries. My commitment to continuous improvement drives 
               me to stay current with emerging technologies and best practices.
             </p>
-            
-            <div className="pt-4">
-              <a 
-                href="/resources/Brayan%20Henao%20CV.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
-              >
-                Download Resume
-              </a>
-            </div>
           </div>
           
           <div>

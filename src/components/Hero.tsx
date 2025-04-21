@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
                 Get in Touch
               </a>
               <a 
-                href="/resources/CV.pdf"
+                href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 border border-gray-300 dark:border-gray-600 font-medium rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
