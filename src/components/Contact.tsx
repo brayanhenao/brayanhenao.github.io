@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import React, {useState} from 'react';
+import {Mail, MapPin, Phone, Send} from 'lucide-react';
 import SectionHeading from './shared/SectionHeading';
 
 type FormData = {
@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
   });
   
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isOpening, setIsOpening] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
   
   const validateForm = (): boolean => {
@@ -62,14 +62,28 @@ const Contact: React.FC = () => {
     }
   };
   
+  const openMailto = () => {
+    const recipient = 'bryanhenao96@gmail.com';
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+  };
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (validateForm()) {
-      setIsSubmitting(true);
+      setIsOpening(true);
       
+      // Open mailto link
+      openMailto();
+      
+      // Show success message and reset form with a short delay
       setTimeout(() => {
-        setIsSubmitting(false);
+        setIsOpening(false);
         setSubmitStatus('success');
         
         setFormData({
@@ -82,7 +96,7 @@ const Contact: React.FC = () => {
         setTimeout(() => {
           setSubmitStatus(null);
         }, 5000);
-      }, 1500);
+      }, 1000);
     }
   };
 
@@ -117,7 +131,7 @@ const Contact: React.FC = () => {
             <h3 className="text-2xl font-semibold mb-6">Let's Talk</h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
               Have a project in mind or want to discuss potential opportunities?
-              Fill out the form, and I'll get back to you as soon as possible.
+              Fill out the form, and your default email client will open with your message.
             </p>
             
             <div className="space-y-6">
@@ -190,9 +204,9 @@ const Contact: React.FC = () => {
                 <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-500 mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
                 </div>
-                <h3 className="text-2xl font-semibold mb-2">Message Sent!</h3>
+                <h3 className="text-2xl font-semibold mb-2">Email Client Opened!</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Thank you for reaching out. I'll get back to you as soon as possible.
+                  Your email client should have opened with your message. If it didn't, please email me directly at bryanhenao96@gmail.com.
                 </p>
               </div>
             ) : (
@@ -280,24 +294,24 @@ const Contact: React.FC = () => {
                 <div>
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isOpening}
                     className={`w-full py-3 px-4 rounded-lg text-white font-medium flex items-center justify-center ${
-                      isSubmitting
+                      isOpening
                         ? 'bg-blue-400 cursor-not-allowed'
                         : 'bg-blue-600 hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg'
                     }`}
                   >
-                    {isSubmitting ? (
+                    {isOpening ? (
                       <>
                         <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Sending...
+                        Opening Email...
                       </>
                     ) : (
                       <>
-                        <Send size={20} className="mr-2" /> Send Message
+                        <Send size={20} className="mr-2" /> Open Email Client
                       </>
                     )}
                   </button>

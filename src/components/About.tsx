@@ -30,21 +30,21 @@ const About: React.FC = () => {
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="About Me" subtitle="Get to know me better" />
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-blue-600 dark:text-blue-400">Who am I?</h3>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm a proactive and adaptable Software Engineer with a passion for continuous learning 
-              and innovation. My approach combines technical expertise with strong problem-solving 
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+              I'm a proactive and adaptable Software Engineer with a passion for continuous learning
+              and innovation. My approach combines technical expertise with strong problem-solving
               abilities, always seeking efficient solutions to complex challenges.
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
               With excellent teamwork skills and experience in large teams, I thrive in collaborative 
               environments using agile methodologies. I take pride in mentoring others and contributing 
               to team growth while maintaining a strong focus on delivering high-quality results.
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
               Fluent in English and Spanish, with elementary French proficiency, I effectively 
               communicate across cultural boundaries. My commitment to continuous improvement drives 
               me to stay current with emerging technologies and best practices.
@@ -63,7 +63,7 @@ const About: React.FC = () => {
           </div>
           
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
               {qualities.map((quality, index) => (
                 <div 
                   key={index} 

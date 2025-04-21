@@ -17,7 +17,6 @@ type Certification = {
   name: string;
   issuer: string;
   date: string;
-  url: string;
 };
 
 const Education: React.FC = () => {
@@ -47,15 +46,13 @@ const Education: React.FC = () => {
       id: 1,
       name: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
       issuer: 'Amazon Web Services',
-      date: '2020',
-      url: 'https://aws.amazon.com/training/awsacademy/'
+      date: '2018',
     },
     {
       id: 2,
       name: 'One of the Colombian best ECAES (national education test)',
       issuer: 'Colombian Ministry of Education',
-      date: '2018',
-      url: '#'
+      date: '2019',
     }
   ];
 
@@ -100,7 +97,6 @@ const Education: React.FC = () => {
               {certifications.map((cert) => (
                 <a
                   key={cert.id}
-                  href={cert.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white dark:bg-gray-700 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500 dark:border-blue-400"

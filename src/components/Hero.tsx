@@ -31,8 +31,8 @@ const Hero: React.FC = () => {
       }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center space-y-6">
-          <div ref={textRef} className="opacity-0 transition-all duration-1000 ease-in-out">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div ref={textRef} className="opacity-0 transition-all duration-1000 ease-in-out md:w-3/5">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
               <span className="text-blue-600 dark:text-blue-400">Hello, I'm </span>
               <span className="relative">
@@ -43,14 +43,14 @@ const Hero: React.FC = () => {
             <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-600 dark:text-gray-300 mb-6">
               Senior Software Engineer
             </h2>
-            <p className="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300 mb-8 text-justify">
+            <p className="text-lg max-w-2xl mx-auto md:mx-0 text-gray-600 dark:text-gray-300 mb-8 text-justify">
               Experienced Senior Software Engineer with over 7 years of expertise in backend development,
               cloud technologies, and distributed systems. Proven track record in building scalable
               solutions using Node.js, Golang, and Java. Currently focused on developing innovative HR
-              solutions at Deel while contributing to open-source projects.
+              solutions at Deel.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-8">
               <a 
                 href="#contact" 
                 onClick={(e) => {
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
                 Get in Touch
               </a>
               <a 
-                href="/resources/Brayan%20Henao%20CV.pdf"
+                href="/resources/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 border border-gray-300 dark:border-gray-600 font-medium rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
@@ -70,34 +70,43 @@ const Hero: React.FC = () => {
                 Download CV
               </a>
             </div>
+            
+            <div className="flex items-center space-x-6 mt-12 justify-center md:justify-start">
+              <a 
+                href="https://github.com/brayanhenao" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+                aria-label="GitHub Profile"
+              >
+                <GitHub size={24} />
+              </a>
+              <a 
+                href="https://linkedin.com/in/bhenao6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a 
+                href="mailto:bryanhenao96@gmail.com" 
+                className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+                aria-label="Email Me"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
           </div>
           
-          <div className="flex items-center space-x-6 mt-12">
-            <a 
-              href="https://github.com/brayanhenao" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
-              aria-label="GitHub Profile"
-            >
-              <GitHub size={24} />
-            </a>
-            <a 
-              href="https://linkedin.com/in/bhenao6" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
-              aria-label="LinkedIn Profile"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a 
-              href="mailto:bryanhenao96@gmail.com" 
-              className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
-              aria-label="Email Me"
-            >
-              <Mail size={24} />
-            </a>
+          <div className="md:w-2/5 flex justify-center">
+            <img
+              src="/public/photo.jpeg"
+              alt="Brayan Henao" 
+              className="rounded-full w-64 h-64 object-cover border-4 border-blue-600 dark:border-blue-400 shadow-xl"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
