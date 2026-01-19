@@ -130,7 +130,7 @@ const Experience: React.FC = () => {
   const jobs: Job[] = [
     {
       id: 1,
-      title: 'Software Engineer II',
+      title: 'Senior Software Engineer',
       company: 'Deel',
       location: 'Colombia – Remote',
       startDate: '2024-05-02',
